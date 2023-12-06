@@ -26,14 +26,10 @@ app.use("/api/categories", categoryRoutes);
 
 /* MongoDB connection */
 mongoose.connect(
-  'mongodb+srv:bhatiavikas2001:VIKAS@cluster0.ft7fugc.mongodb.net/?retryWrites=true&w=majority',
-  {
-    useCreateIndex: true,
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  },
+  "mongodb://0.0.0.0:27017/",
+  { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },
   () => {
-    console.log("MONGODB CONNECTED");
+    console.log('Connected to MongoDB');
   }
 );
 
